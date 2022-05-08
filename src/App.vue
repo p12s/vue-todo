@@ -46,7 +46,7 @@
           v-bind="props"
         ></v-img>
       </template>
-      <v-app-bar-nav-icon @click="drawer = !drower"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>Why me?</v-app-bar-title>
       <v-spacer></v-spacer>
       <v-btn icon>
@@ -66,16 +66,11 @@
         </v-tabs>
       </template>
     </v-app-bar>
-    <v-sheet
-      id="scrolling-techniques-3"
-      class="overflow-y-auto"
-      max-height="600"
-    >
-      <v-container style="height: 1000px;"></v-container>
-    </v-sheet>
-
     <v-main>
-      <v-container fluid>
+      <v-container 
+        fluid 
+        class="pa-0"
+      >
         <router-view></router-view>
       </v-container>
     </v-main>

@@ -12,11 +12,12 @@
       clearable
     ></v-text-field>
     <v-list
-      flat
+      v-if="$store.state.tasks.length"
       class="pa-0"
+      flat
     >
       <div
-        v-for="task, index in tasks"
+        v-for="task, index in $store.state.tasks"
         :key="index"
       >
         <v-list-item 
@@ -48,6 +49,13 @@
         <v-divider></v-divider>
       </div>
     </v-list>
+    <div
+      v-else
+      class="no-tasks text-h5 pa-3"
+    >
+      <v-icon large color="lighten-1">mdi-smoking</v-icon>
+      Cool! The work is done
+    </div>
   </div>
 </template>
 
@@ -56,52 +64,29 @@
     name: 'Todo',
     data() {
       return {
-        tasks: [
-          {
-            id: 1,
-            title: 'Sleep, Neo',
-            done: true
-          },
-          {
-            id: 2,
-            title: 'Give Morpheus',
-            done: false
-          },
-          {
-            id: 3,
-            title: 'Get out of the car',
-            done: false
-          }
-        ],
         newTaskTitle: ''
       }
     },
     methods: {
       doneTask(id) {
-        let task = this.tasks.filter(task => task.id === id)[0]
-        task.done = !task.done
+        this.$store.commit('doneTask', id)
       },
       deleteTask(id) {
-        this.tasks = this.tasks.filter(task => task.id !== id)
+        this.$store.commit('deleteTask', id)
       },
       addTask() {
-        let max = {
-          id: 0
-        }
-        if (this.tasks.length > 0) {
-          max = this.tasks.reduce(function(prev, current) {
-            return (prev.id > current.id) ? prev : current
-          })
-        }
-
-        let newTask = {
-          id: max.id + 1, // Date.now(),
-          title: this.newTaskTitle,
-          done: false
-        }
-        this.tasks.push(newTask)
+        this.$store.commit('addTask', this.newTaskTitle)
         this.newTaskTitle = ''
       }
     }
   }
 </script>
+
+<style lang="sass">
+.no-tasks
+  position: absolute
+  left: 50%
+  top: 60%
+  transform: translate(-50%, -50%)
+  opacity: .5
+</style>

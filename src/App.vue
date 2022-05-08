@@ -61,7 +61,6 @@
       <template v-slot:extension>
         <v-tabs align-with-title>
           <v-tab>Inbox</v-tab>
-          <v-tab>Plan</v-tab>
           <v-tab>Done</v-tab>
         </v-tabs>
       </template>

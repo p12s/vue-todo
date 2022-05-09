@@ -1,16 +1,6 @@
 <template>
   <div class="home pa-0">
-    <v-text-field
-      v-model="newTaskTitle"
-      @click:append="addTask"
-      @keyup.enter="addTask"
-      class="pa-3"
-      outlined
-      label="No more tasks, please!"
-      append-icon="mdi-plus"
-      hide-details
-      clearable
-    ></v-text-field>
+    <field-add-task/>
     <v-list
       v-if="$store.state.tasks.length"
       class="pa-0"
@@ -60,8 +50,13 @@
 </template>
 
 <script>
+  import FieldAddTask from '@/components/Todo/FieldAddTask.vue'
+
   export default {
     name: 'Todo',
+    components: {
+      'field-add-task': FieldAddTask
+    },
     data() {
       return {
         newTaskTitle: ''

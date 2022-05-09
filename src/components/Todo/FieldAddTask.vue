@@ -20,12 +20,6 @@ export default {
     }
   },
   methods: {
-    doneTask(id) {
-      this.$store.commit('doneTask', id)
-    },
-    deleteTask(id) {
-      this.$store.commit('deleteTask', id)
-    },
     addTask() {
       this.$store.commit('addTask', this.newTaskTitle)
       this.newTaskTitle = ''
@@ -33,7 +27,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

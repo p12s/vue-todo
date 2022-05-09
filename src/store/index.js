@@ -65,6 +65,10 @@ export default new Vuex.Store({
         state.snackbar.show = true
         state.snackbar.text = text
       }, 300)
+    },
+    updateTaskTitle(state, payload) {
+      let task = state.tasks.filter(task => task.id === payload.id)[0]
+      task.title = payload.title
     }
   },
   actions: { // works with 'dispatch' key: this.$store.dispatch('deleteTask', id)

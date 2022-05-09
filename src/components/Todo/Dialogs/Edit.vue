@@ -11,6 +11,7 @@
       <v-card-text>I'd prefer to delete them, but ok</v-card-text>
       <v-text-field 
         v-model="taskTitle"
+        @keyup.enter="saveTask"
         class="ma-6"
       />
       <v-card-actions>
@@ -22,7 +23,7 @@
           Cancel
         </v-btn>
         <v-btn
-          @click="$store.dispatch('deleteTask', task.id)"
+          @click="saveTask"
           text
         >
           Save new
@@ -43,6 +44,16 @@ export default {
   },
   mounted() {
     this.taskTitle = this.task.title
+  },
+  methods: {
+    saveTask() {
+      const payload = {
+        id: this.task.id,
+        title: this.taskTitle
+      }
+      this.$store.commit('updateTaskTitle', payload)
+      this.$emit('close')
+    }
   }
 }
 </script>

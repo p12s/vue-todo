@@ -21,11 +21,15 @@ export default new Vuex.Store({
         title: 'Get out of the car',
         done: false
       }
-    ]
+    ],
+    snackbar: {
+      show: false,
+      text: 'There is no message for you'
+    }
   },
   getters: {
   },
-  mutations: {
+  mutations: {  // works with 'commit' key: this.$store.commit('deleteTask', id)
     doneTask(state, id) {
       let task = state.tasks.filter(task => task.id === id)[0]
       task.done = !task.done
@@ -52,8 +56,29 @@ export default new Vuex.Store({
         done: false
       }
       state.tasks.push(newTask)
-    }
+    },
+    showSnackbar(state, text) {
+      if (state.snackbar.show) {
+        state.snackbar.show = false
+      }
+      setTimeout(() => {
+        state.snackbar.show = true
+        state.snackbar.text = text
+      }, 300)
+    },
   },
-  actions: {
+  actions: { // works with 'dispatch' key: this.$store.dispatch('deleteTask', id)
+    addTask({ commit }, newTaskTitle) {
+      commit('addTask', newTaskTitle)
+      commit('showSnackbar', 'Oh, gosh, another one!')
+    },
+    deleteTask({ commit }, id) {
+      commit('deleteTask', id)
+      commit('showSnackbar', 'Well done, delete another shit!')
+    },
+    doneTask({ commit }, id) {
+      commit('doneTask', id)
+      commit('showSnackbar', 'Yes, one less!')
+    }
   }
 })

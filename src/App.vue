@@ -71,11 +71,9 @@
         class="pa-0"
       >
         <router-view></router-view>
+        <snackbar/>
       </v-container>
     </v-main>
-    <v-footer app>
-      <!-- -->
-    </v-footer>
   </v-app>
 </template>
 
@@ -88,5 +86,8 @@
         { title: 'About', icon: 'mdi-cards-heart-outline', to: '/about' },
       ]
     }),
+    components: {
+      'snackbar': require('@/components/Shared/Snackbar.vue').default
+    }
   }
 </script>

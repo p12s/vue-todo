@@ -65,7 +65,7 @@ export default new Vuex.Store({
         state.snackbar.show = true
         state.snackbar.text = text
       }, 300)
-    },
+    }
   },
   actions: { // works with 'dispatch' key: this.$store.dispatch('deleteTask', id)
     addTask({ commit }, newTaskTitle) {

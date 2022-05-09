@@ -34,6 +34,7 @@
 
 <script>
 export default {
+  name: 'todo-edit',
   props: ['task'],
   data() {
     return {

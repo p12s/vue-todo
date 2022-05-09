@@ -30,6 +30,7 @@
 
 <script>
 export default {
+  name: 'todo-delete',
   props: ['task']
 }
 </script>

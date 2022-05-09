@@ -16,3 +16,9 @@
     </template>
   </v-snackbar>
 </template>
+
+<script>
+export default {
+  name: 'shared-snackbar'
+}
+</script>

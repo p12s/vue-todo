@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  name: 'list-task',
   components: {
     'task': require('@/components/Todo/Task.vue').default
   }

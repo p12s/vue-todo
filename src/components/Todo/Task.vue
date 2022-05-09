@@ -27,6 +27,7 @@
 
 <script>
 export default {
+  name: 'todo-task',
   props: ['task'],
   methods: {
     doneTask(id) {

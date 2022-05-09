@@ -42,6 +42,7 @@
 
 <script>
 export default {
+  name: 'task-menu',
   props: ['task'],
   data: () => ({
     dialogs: {

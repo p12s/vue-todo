@@ -57,7 +57,9 @@
           <v-row class="py-3">
             <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
             <v-spacer></v-spacer>
-            <tools-search />
+            <tools-search 
+              v-if="$route.path === '/'"
+            />
           </v-row>
           <v-row class="px-3 text-h4">
             <v-app-bar-title>

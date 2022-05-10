@@ -2,19 +2,25 @@
   <v-app id="inspire">
     <v-navigation-drawer 
       v-model="drawer"
+      :mobile-breakpoint="768"
       app
     >
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Vuetify Todo
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            Worsest todo ever
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-      <v-divider></v-divider>
+      <v-img
+        class="pa-4 pt-7"
+        height="170"
+        src="blood.jpg"
+      >
+        <v-avatar>
+          <img
+            size="70"
+            src="https://cdn.vuetifyjs.com/images/john.jpg"
+            alt="John"
+            class="mb-1"
+          />
+        </v-avatar>
+        <div class="white--text text-subtitle-1 font-weight-bold">John Dow</div>
+        <div class="white--text text-subtitle-2">@johnny_dow</div>
+      </v-img>
       <v-list
         dense
         nav
@@ -47,7 +53,7 @@
           v-bind="props"
         ></v-img>
       </template>
-      <v-container class="pa-0">
+      <v-container class="header-container pa-0">
           <v-row class="py-3">
             <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
             <v-spacer></v-spacer>
@@ -91,3 +97,8 @@
     }
   }
 </script>
+
+<style lang="sass">
+  .header-container
+    max-width: none !important
+</style>

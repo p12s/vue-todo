@@ -1,4 +1,4 @@
-# Worst Todo app
+# Shitty Todo app
 
 ## Introducton
 In this example project, I learn how to use Vuetify along with Vue JS and Vuex to build a shitty Todo app from scratch.  

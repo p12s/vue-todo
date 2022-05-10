@@ -1,7 +1,7 @@
 <template>
   <div class="about pa-6">
     <h1>About {{ $store.state.appTitle }}</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde dolorum, consectetur nesciunt tempora explicabo amet impedit rem laborum autem qui saepe cum sapiente quia, itaque possimus minus. Exercitationem, vero similique!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde dolorum, consectetur nesciunt tempora explicabo amet impedit rem laborum autem qui saepe cum sapiente quia, itaque possimus minus. Exercitationem, vero similique!</p>
+    <p>In this example project, I learn how to use Vuetify along with Vue JS and Vuex to build a shitty Todo app from scratch.</p>
+    <p>As a result the app looks very shitty on both desktop and mobile devices. </p>
   </div>
 </template>

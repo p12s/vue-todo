@@ -30,7 +30,8 @@ export default new Vuex.Store({
       text: 'There is no message for you'
     },
     search: null,
-    appTitle: process.env.VUE_APP_TITLE
+    appTitle: process.env.VUE_APP_TITLE,
+    sorting: false
   },
   mutations: {  // works with 'commit' key: this.$store.commit('deleteTask', id)
     doneTask(state, id) {
@@ -80,6 +81,12 @@ export default new Vuex.Store({
     },
     setSearch(state, value) {
       state.search = value
+    },
+    toggleSorting(state) {
+      state.sorting = !state.sorting
+    }, 
+    setTasks(state, tasks) {
+      state.tasks = tasks
     }
   },
   actions: { // works with 'dispatch' key: this.$store.dispatch('deleteTask', id)

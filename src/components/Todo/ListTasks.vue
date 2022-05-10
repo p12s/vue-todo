@@ -3,19 +3,37 @@
     class="pa-0"
     flat
   >
-    <task
-      v-for="task, index in $store.getters.tasksFiltered"
-      :key="index"
-      :task="task"
-    />
+    <draggable 
+      v-model="tasks"
+      handle=".handle"
+    >      
+      <task
+        v-for="task, index in tasks"
+        :key="index"
+        :task="task"
+      />
+    </draggable>
   </v-list>
 </template>
 
 <script>
+import draggable from 'vuedraggable'
+
 export default {
   name: 'list-task',
   components: {
-    'task': require('@/components/Todo/Task.vue').default
+    draggable,
+    'task': require('@/components/Todo/Task.vue').default,    
+  },
+  computed: {
+    tasks: {
+        get() {
+            return this.$store.getters.tasksFiltered
+        },
+        set(value) {
+            this.$store.commit('setTasks', value)
+        }
+    }
   }
 }
 </script>

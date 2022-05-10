@@ -7,6 +7,9 @@
     <no-tasks
       v-else
     />
+    <button-done-sorting 
+      v-if="$store.state.sorting"
+    />
   </div>
 </template>
 
@@ -20,7 +23,8 @@
     components: {
       'field-add-task': FieldAddTask,
       'list-tasks': ListTasks,
-      'no-tasks': NoTasks
+      'no-tasks': NoTasks,
+      'button-done-sorting': require('@/components/Todo/Dialogs/ButtonDoneSorting.vue').default,
     }
   }
 </script>

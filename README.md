@@ -1,4 +1,5 @@
 # Shitty Todo app
+![screen](https://github.com/p12s/vue-todo/blob/main/vue-todo-iphone.jpg?raw=true)  
 
 ## Introducton
 In this example project, I learn how to use Vuetify along with Vue JS and Vuex to build a shitty Todo app from scratch.  

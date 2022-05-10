@@ -39,6 +39,7 @@
       app
       dark
       prominent
+      height="170"
       src="blood.jpg"
     >
       <template v-slot:img="{ props }">
@@ -52,8 +53,13 @@
             <v-spacer></v-spacer>
             <tools-search />
           </v-row>
+          <v-row class="px-3 text-h4">
+            <v-app-bar-title>
+              Vuetify Todo
+            </v-app-bar-title>
+          </v-row>
           <v-row class="px-3">
-            <v-app-bar-title>Why me?</v-app-bar-title>
+            <live-date-time />
           </v-row>
         </v-container>
     </v-app-bar>
@@ -81,6 +87,7 @@
     components: {
       'snackbar': require('@/components/Shared/Snackbar.vue').default,
       'tools-search': require('@/components/Tools/Search.vue').default,
+      'live-date-time': require('@/components/Tools/LiveDateTime.vue').default,
     }
   }
 </script>

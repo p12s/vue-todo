@@ -1,21 +1,24 @@
 # Worst Todo app
 
 ## Introducton
-В этом курсе вы узнаете, как использовать Vuetify вместе с Vue JS и Vuex для создания великолепного приложения Todo с нуля. Vuetify — чрезвычайно популярный Vue UI Framework, предлагающий сотни компонентов дизайна, которые можно использовать для создания практически любого веб-сайта или приложения. Однако начать работу может быть непросто, поэтому в этом курсе вы узнаете, как с нуля создать красивое адаптивное приложение, которое будет отлично смотреться как на ПК, так и на мобильных устройствах.  
+In this example project, I learn how to use Vuetify along with Vue JS and Vuex to build a shitty Todo app from scratch.  
+As a result the app looks very shitty on both desktop and mobile devices.  
+    
+I use a little Vuetify components such as lists, text fields, menus, dialogs, date pickers, snackbars, and more.  
   
-Вы будете использовать множество компонентов Vuetify, таких как списки, текстовые поля, меню, диалоговые окна, средства выбора даты, снэкбары и многое другое. Также будете использовать Vuex для централизации основных данных и логики приложения, настройки состояния, мутаций, действий и геттеров.  
+I separate my shitty application into child components to make project management worse.  
+    
+As a result I can display a list of tasks, add tasks, and mark tasks as completed by clicking on them. Do I have to work now?  
   
-Вы разделите свое приложение на дочерние компоненты, чтобы упростить управление проектом.
+Each shitty task has a shitty menu with shitty options to edit the task name, add a due date for the task, delete the task (my favorite feature), and even the ability to reorder our tasks using drag and drop.
   
-В нашем приложении курса Vuetify Todo мы можем отображать список задач, добавлять задачи и отмечать задачи как выполненные, нажимая на них.  
+I can even filter tasks using the expandable search box (to make you suffer more).
   
-У каждой задачи есть меню с параметрами для редактирования имени задачи, добавления срока выполнения задачи, удаления задачи и даже возможности изменить порядок наших задач с помощью перетаскивания.  
+I use Vue Router to set up pages and routes that can be followed by links in the navigation bar, and store all data in the user's browser using IndexedDB and Localbase. Thus, even if the user "accidentally" closes the browser or refreshes it, all his data is saved (because if you started to complete tasks - suffer to the end).
   
-Мы даже можем фильтровать наши задачи, используя расширяющееся поле поиска.  
+I learn to test, debug, and patch this crap app on my real old iPhone 7 and fake Android devices.  
   
-Вы будете использовать Vue Router для настройки страниц и маршрутов, по которым можно будет перемещаться по ссылкам в панели навигации, а также сможете хранить все данные в браузере пользователя, используя IndexedDB и Localbase. Таким образом, даже если пользователь закрывает браузер или обновляет его, все его данные сохраняются.  
+And when I deploy this shitty-code app to Netlify!  
   
-Научитесь тестировать, отлаживать и исправлять приложение на реальных устройствах iOS и Android.  
-  
-И когда вы закончите, вы развернете готовое приложение в Netlify!  
+Hope you never use or watch this shitty code.  
   

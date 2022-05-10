@@ -8,13 +8,13 @@ export default new Vuex.Store({
     tasks: [
       {
         id: 1,
-        title: 'Sleep, Neo',
+        title: 'Turn off computer, Neo',
         done: false,
         dueDate: '2022-05-18'
       },
       {
         id: 2,
-        title: 'Give Morpheus',
+        title: 'Betray morpheus to the agent Smith',
         done: false,
         dueDate: '2022-05-19'
       },

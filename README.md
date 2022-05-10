@@ -22,3 +22,26 @@ And when I deploy this shitty-code app to Netlify!
   
 Hope you never use or watch this shitty code.  
   
+## List of sources used
+  
+### Vue, Vietify
+- [docs](https://vuetifyjs.com/en/api/v-navigation-drawer/#props)
+- [icons](https://materialdesignicons.com)
+
+### Localbase (IndexedDB - advanced version of LocalStorage)
+- [IndexedDB info](https://learn.javascript.ru/indexeddb)
+- [npm](https://github.com/dannyconnell/localbase#disable-the-gorgeous-logs)
+
+### Drag-end-drop
+- [npm](https://github.com/SortableJS/Vue.Draggable)
+- [used example](https://github.com/SortableJS/Vue.Draggable/blob/master/example/components/handle.vue)
+- [example](https://sortablejs.github.io/Vue.Draggable/#/handle)
+
+### Environment
+- [info](https://cli.vuejs.org/guide/mode-and-env.html#modes)
+
+### Vue routing
+- [info](https://v3.router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards)
+
+### Date formatting
+- [info](https://date-fns.org/v2.28.0/docs/format)

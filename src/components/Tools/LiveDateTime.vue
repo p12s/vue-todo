@@ -14,7 +14,7 @@ export default {
   }),
   methods: {
     getDate() {
-      this.date = format(new Date(), 'MMMM d yyy, EEEE HH:mm:ss')
+      this.date = format(new Date(), 'MMMM dd yyy, EEEE HH:mm:ss')
       setTimeout(this.getDate, 1000)
     }
   },
@@ -23,7 +23,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

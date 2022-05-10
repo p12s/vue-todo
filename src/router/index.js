@@ -24,9 +24,8 @@ const router = new VueRouter({
   routes
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _, next) => { // to, from, next
   document.title = `${process.env.VUE_APP_TITLE} | ${to.name}`
-  console.log(from)
   next()
 })
 

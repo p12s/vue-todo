@@ -46,3 +46,7 @@ Hope you never use or watch this shitty code.
 
 ### Date formatting
 - [info](https://date-fns.org/v2.28.0/docs/format)
+
+## More readmes
+- [Install and run](install-and-run.md)
+- [Env](env.md)

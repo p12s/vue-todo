@@ -28,9 +28,8 @@ export default new Vuex.Store({
     snackbar: {
       show: false,
       text: 'There is no message for you'
-    }
-  },
-  getters: {
+    },
+    search: null
   },
   mutations: {  // works with 'commit' key: this.$store.commit('deleteTask', id)
     doneTask(state, id) {
@@ -77,6 +76,9 @@ export default new Vuex.Store({
     updateTaskDueDate(state, payload) {
       let task = state.tasks.filter(task => task.id === payload.id)[0]
       task.dueDate = payload.dueDate
+    },
+    setSearch(state, value) {
+      state.search = value
     }
   },
   actions: { // works with 'dispatch' key: this.$store.dispatch('deleteTask', id)
@@ -100,5 +102,15 @@ export default new Vuex.Store({
       commit('updateTaskDueDate', payload)
       commit('showSnackbar', 'Task due date updated')
     },
+  },
+  getters: {
+    tasksFiltered(state) {
+      if (!state.search) {
+        return state.tasks
+      }
+      return state.tasks.filter(task => 
+        task.title.toLocaleLowerCase().includes(state.search.toLocaleLowerCase())
+      )
+    }
   }
 })

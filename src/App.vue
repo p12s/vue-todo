@@ -46,18 +46,16 @@
           v-bind="props"
         ></v-img>
       </template>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title>Why me?</v-app-bar-title>
-      <v-spacer></v-spacer>
-      
-      <tools-search />
-
-      <template v-slot:extension>
-        <v-tabs align-with-title>
-          <v-tab>Inbox</v-tab>
-          <v-tab>Done</v-tab>
-        </v-tabs>
-      </template>
+      <v-container class="pa-0">
+          <v-row class="py-3">
+            <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+            <v-spacer></v-spacer>
+            <tools-search />
+          </v-row>
+          <v-row class="px-3">
+            <v-app-bar-title>Why me?</v-app-bar-title>
+          </v-row>
+        </v-container>
     </v-app-bar>
     <v-main>
       <v-container 

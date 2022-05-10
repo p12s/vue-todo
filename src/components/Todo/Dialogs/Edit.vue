@@ -24,6 +24,7 @@
         </v-btn>
         <v-btn
           @click="saveTask"
+          :disabled="!taskTitle.length || taskTitle === task.title"
           text
         >
           Save new
@@ -39,7 +40,7 @@ export default {
   props: ['task'],
   data() {
     return {
-      taskTitle: null
+      taskTitle: ''
     }
   },
   mounted() {
@@ -51,7 +52,7 @@ export default {
         id: this.task.id,
         title: this.taskTitle
       }
-      this.$store.commit('updateTaskTitle', payload)
+      this.$store.dispatch('updateTaskTitle', payload)
       this.$emit('close')
     }
   }

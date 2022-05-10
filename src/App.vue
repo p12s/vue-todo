@@ -49,15 +49,9 @@
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>Why me?</v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+      
+      <tools-search />
+
       <template v-slot:extension>
         <v-tabs align-with-title>
           <v-tab>Inbox</v-tab>
@@ -87,7 +81,8 @@
       ]
     }),
     components: {
-      'snackbar': require('@/components/Shared/Snackbar.vue').default
+      'snackbar': require('@/components/Shared/Snackbar.vue').default,
+      'tools-search': require('@/components/Tools/Search.vue').default,
     }
   }
 </script>

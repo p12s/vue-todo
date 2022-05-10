@@ -25,7 +25,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = `Vuetify Todo | ${to.name}`
+  document.title = `${process.env.VUE_APP_TITLE} | ${to.name}`
   console.log(from)
   next()
 })

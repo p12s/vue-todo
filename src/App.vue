@@ -61,7 +61,7 @@
           </v-row>
           <v-row class="px-3 text-h4">
             <v-app-bar-title>
-              Vuetify Todo
+              {{ $store.state.appTitle }}
             </v-app-bar-title>
           </v-row>
           <v-row class="px-3">

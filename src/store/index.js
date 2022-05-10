@@ -29,7 +29,8 @@ export default new Vuex.Store({
       show: false,
       text: 'There is no message for you'
     },
-    search: null
+    search: null,
+    appTitle: process.env.VUE_APP_TITLE
   },
   mutations: {  // works with 'commit' key: this.$store.commit('deleteTask', id)
     doneTask(state, id) {

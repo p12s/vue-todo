@@ -1,4 +1,6 @@
-# Shitty Todo app
+# Shitty Todo app [![Netlify Status](https://api.netlify.com/api/v1/badges/7cf66440-1992-4145-a6a0-f57b7db05c1a/deploy-status)](https://app.netlify.com/sites/shitty-vue-todo/deploys)  
+[Link](https://shitty-vue-todo.netlify.app/#/)  
+  
 ![screen](https://github.com/p12s/vue-todo/blob/main/vue-todo-iphone.jpg?raw=true)  
 
 ## Introducton
